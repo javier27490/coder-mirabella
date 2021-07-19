@@ -1,0 +1,783 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'CeraPro-Light';
+  src: url(fonts/CeraPro-Regular.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'CeraPro-Bold';
+  src: url(fonts/CeraPro-Bold.ttf) format("truetype"); }
+
+@font-face {
+  font-family: 'AvenirLTStd-Heavy';
+  src: url(fonts/AvenirLTStd-Heavy.otf) format("opentype"); }
+
+@font-face {
+  font-family: 'AvenirLT-Roman';
+  src: url(fonts/AvenirLT-Roman.otf) format("opentype"); }
+
+* {
+  margin: 0%;
+  padding: 0%; }
+
+body {
+  background-color: #f4f4f4; }
+
+.header {
+  max-height: 1024px;
+  min-height: 135px; }
+
+h1 {
+  font-family: "cerapro-bold";
+  font-size: 35px;
+  color: #010165; }
+
+h2 {
+  font-family: 'CeraPro-Bold';
+  font-size: 25px; }
+
+h3 {
+  font-family: 'AvenirLT-Roman'; }
+
+h4 {
+  color: #abc95b;
+  font-size: 16px;
+  font-family: 'AvenirLTStd-Heavy'; }
+
+h5 {
+  font-family: 'AvenirLT-Roman'; }
+
+p {
+  font-family: 'CeraPro-Light';
+  color: black; }
+
+form textarea {
+  border-style: none;
+  height: 100px;
+  background-color: #b9b9b9; }
+
+#enviarBtn {
+  float: right;
+  background-color: #abc95b;
+  width: 60px;
+  height: 25px;
+  margin: 15px 0px 0px 493px; }
+
+#enviarBtn:hover {
+  background-color: darkgreen; }
+
+.header__navbar {
+  background-color: #010165;
+  color: white;
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  font-family: 'CeraPro-Light'; }
+
+.header__nav--desktop ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  margin: 2px; }
+  .header__nav--desktop ul li {
+    margin-right: 15px; }
+    .header__nav--desktop ul li a {
+      color: white;
+      padding-left: 15px;
+      font-family: "CeraPro-Bold";
+      text-decoration: none;
+      margin: 2px; }
+
+.header__nav--responsive {
+  display: none; }
+
+.contenido img {
+  height: 120px;
+  width: auto; }
+
+.feedsIcons {
+  width: 80px;
+  height: 80px; }
+
+.contenedorFI {
+  margin-bottom: 45px;
+  text-align: center; }
+
+.ejesTrabajo {
+  background-color: white;
+  text-align: center;
+  padding: 4%;
+  background-color: #f4f4f4; }
+  .ejesTrabajo h2 {
+    color: #535353; }
+
+.contenedorFacebook {
+  padding: 45px 31px 31px 31px;
+  background-color: white;
+  margin: 70px; }
+
+#instagramFeed {
+  overflow: scroll;
+  height: 500px; }
+
+.articulos {
+  height: 500px;
+  padding: 60px; }
+  .articulos img {
+    width: 590px;
+    height: auto; }
+
+.novedades {
+  display: flex;
+  margin-bottom: 30px; }
+
+.novedades__bloqueNoticias {
+  width: 1385px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center; }
+
+.novedades__bloqueNoticias__ctr {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 950px; }
+
+.novedades__bloqueNoticias__ctr--articulos {
+  display: flex;
+  justify-content: space-between;
+  width: 948px;
+  height: 1104px;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .novedades__bloqueNoticias__ctr--articulos p {
+    font-size: 15px;
+    font-family: 'AvenirLTStd-Heavy';
+    color: grey; }
+  .novedades__bloqueNoticias__ctr--articulos article {
+    height: 543px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .novedades__bloqueNoticias__ctr--articulos article h3 {
+      color: #00bcf6; }
+    .novedades__bloqueNoticias__ctr--articulos article a {
+      text-decoration: none; }
+    .novedades__bloqueNoticias__ctr--articulos article h5 {
+      color: #bbb; }
+    .novedades__bloqueNoticias__ctr--articulos article img {
+      height: 300px;
+      width: auto; }
+
+#contactoPrensa {
+  width: 300px;
+  height: 1100px;
+  display: flex;
+  flex-direction: column; }
+
+#hablaConmigo {
+  position: fixed;
+  bottom: 620px;
+  right: 120px;
+  width: auto;
+  height: 150px; }
+  #hablaConmigo img {
+    width: auto;
+    height: 150px; }
+
+#parrafoEjes {
+  height: auto;
+  width: 500px;
+  display: inline-flex;
+  font-family: 'CeraPro-Light'; }
+
+#redesFijo {
+  background-image: url(../img/redesfloatante.png);
+  background-size: contain;
+  transform: rotate(90deg) translate(10px, 377px);
+  width: 31px;
+  height: 150px;
+  float: right; }
+  #redesFijo ul {
+    list-style: none; }
+    #redesFijo ul li {
+      list-style: none;
+      width: 32px;
+      height: 23px; }
+      #redesFijo ul li a {
+        width: 32px;
+        height: 23px;
+        opacity: 0; }
+  #redesFijo img {
+    width: 35px; }
+
+#redesFlotante {
+  background-image: url(../img/redesfloatante.png);
+  background-size: contain;
+  position: fixed;
+  bottom: 100px;
+  right: 120px;
+  width: 31px;
+  height: 150px;
+  left: 89%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+  #redesFlotante ul {
+    list-style: none; }
+    #redesFlotante ul li {
+      list-style: none;
+      width: 32px;
+      height: 23px; }
+  #redesFlotante a {
+    width: 32px;
+    height: 23px;
+    opacity: 0; }
+  #redesFlotante img {
+    width: 35px; }
+
+.header__bg {
+  overflow: hidden;
+  max-width: 100%; }
+
+.header__bg--img {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: -25px;
+  z-index: -1; }
+
+#bg2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: -1; }
+
+#bg2 img {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  min-width: 50%;
+  min-height: 50%; }
+
+#icons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 5%; }
+  #icons li {
+    transition: all .2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'AvenirLT-Roman';
+    width: 92px; }
+    #icons li a {
+      text-decoration: none; }
+
+#icons li:hover {
+  transform: scale(1.1); }
+
+#icons li:hover .textIcons {
+  visibility: visible; }
+
+.textIcons {
+  visibility: hidden; }
+
+#iconEjesTrabajo {
+  width: 90px; }
+
+#ventana-flotante {
+  width: 206px;
+  /* Ancho de la ventana */
+  height: 90px;
+  /* Alto de la ventana */
+  position: fixed;
+  top: 100px;
+  left: 89%;
+  margin-left: -180px;
+  z-index: 999; }
+
+#ventana-flotante .cerrar {
+  position: absolute;
+  left: 190px;
+  border-bottom: 1px solid #bbb;
+  border-left: 1px solid #bbb;
+  color: #999;
+  background: white;
+  line-height: 17px;
+  text-decoration: none;
+  padding: 0px 4px;
+  font-family: Arial;
+  border-radius: 0 0 0 5px;
+  box-shadow: -1px 1px white;
+  font-size: 18px;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -o-transition: .3s;
+  -ms-transition: .3s; }
+
+#ventana-flotante .cerrar:hover {
+  background: #ff6868;
+  color: white;
+  text-decoration: none;
+  text-shadow: -1px -1px red;
+  border-bottom: 1px solid red;
+  border-left: 1px solid red; }
+
+#ventana-flotante #contenedor .contenido {
+  font-size: 20px;
+  /* Tamaño del texto del mensaje */
+  color: #555;
+  /* Color del texto del mensaje */ }
+
+.oculto {
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -o-transition: 1s;
+  -ms-transition: 1s;
+  opacity: 0;
+  -ms-opacity: 0;
+  -moz-opacity: 0;
+  visibility: hidden; }
+
+#facebookSection {
+  display: flex;
+  padding: 40px;
+  justify-content: center; }
+
+#fotos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  #fotos img {
+    width: 350px; }
+  #fotos div {
+    width: 1251px;
+    display: flex;
+    justify-content: space-between; }
+
+.sobreMi {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  color: #010165;
+  align-items: center;
+  margin-bottom: 30px; }
+  .sobreMi div {
+    width: 1250px; }
+  .sobreMi p {
+    width: 540px;
+    text-align: justify;
+    color: #010165; }
+
+.sobreMi__texto {
+  display: flex;
+  justify-content: space-between; }
+
+.proyectos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+  .proyectos h1 {
+    height: 100px; }
+  .proyectos div {
+    width: 1250px; }
+
+.proyectos__articulos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  height: 800px; }
+  .proyectos__articulos img {
+    width: 350px;
+    height: auto; }
+  .proyectos__articulos article {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 50px;
+    height: 850px; }
+    .proyectos__articulos article h3 {
+      color: #010165; }
+
+#santaFe {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center; }
+
+#SFarticulos {
+  width: 1300px; }
+
+#tituloSF {
+  height: 170px;
+  width: 600px; }
+  #tituloSF h1 {
+    height: 60px; }
+
+.articulosSF {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px; }
+  .articulosSF img {
+    width: 600px;
+    height: auto; }
+
+.infoSF {
+  width: 590px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 220px; }
+  .infoSF h2 {
+    color: #0180b2; }
+  .infoSF a {
+    text-decoration: none; }
+
+.formulario {
+  display: flex;
+  width: 553px;
+  flex-direction: column;
+  align-content: stretch;
+  font-family: 'CeraPro-Bold'; }
+
+.formulario legend {
+  font-size: 22px;
+  height: 40px;
+  color: #010165; }
+
+.formulario label {
+  margin-bottom: 10px;
+  color: #0180b2; }
+
+.formulario input {
+  margin-bottom: 10px;
+  border: none;
+  background-color: #b9b9b9;
+  color: white; }
+
+#intereses {
+  display: flex;
+  flex-wrap: wrap;
+  height: 145px;
+  flex-direction: column; }
+
+#intereses label {
+  font-size: 14px;
+  color: grey; }
+
+#intereses input {
+  height: 10px;
+  width: 10px;
+  background-color: #b9b9b9;
+  margin-left: 2px; }
+
+#puntoEscucha {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#puntoEscuchaTitulo {
+  width: 640px;
+  height: 150px;
+  text-align: center;
+  margin: 40px 0px 40px 0px; }
+
+#formularioImagen {
+  display: flex;
+  flex-direction: row;
+  width: 1180px;
+  justify-content: space-evenly;
+  height: 750px; }
+
+.pagination_section {
+  top: 500px;
+  right: 230px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'CeraPro-Bold'; }
+
+/* pagination styling */
+.pagination_section a {
+  color: black;
+  padding: 10px 18px;
+  text-decoration: none; }
+
+/* pagination hover effect on non-active */
+.pagination_section a:hover:not(.active) {
+  background-color: #031F3B;
+  color: white; }
+
+#seccionNoticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#pagNoticia {
+  display: flex;
+  width: 1400px;
+  flex-direction: column; }
+
+#pagNoticia img {
+  width: 550px;
+  margin-bottom: 30px; }
+
+#pagNoticia h1 {
+  font-size: 25px;
+  width: 550px;
+  text-align: center;
+  margin-bottom: 30px; }
+
+#tituloNoticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+#textoNoticia {
+  display: flex;
+  justify-content: space-around;
+  text-align: justify;
+  margin-bottom: 30px; }
+
+#textoNoticia p {
+  width: 550px; }
+
+/* pagination hover effect on active*/
+a:nth-child {
+  background-color: green;
+  color: white; }
+
+a:nth-child {
+  font-weight: bold; }
+
+a:nth-child {
+  font-weight: bold; }
+
+.content {
+  margin: 50px;
+  padding: 15px;
+  width: 800px;
+  height: 200px;
+  border: 2px solid black; }
+
+#parrafos {
+  width: 1400px; }
+
+@media only screen and (max-width: 768px) {
+  .header {
+    min-height: 135px;
+    align-items: center;
+    width: 100%; }
+  .header__navbar {
+    justify-content: center; }
+  #ventana-flotante {
+    display: none; }
+  #facebookSection {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 5px; }
+  .ejesTrabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 640px;
+    justify-content: space-around; }
+  .ejesTrabajo h2 {
+    font-size: 24px; }
+  .bg {
+    top: 54px;
+    height: 400px;
+    width: 100%;
+    object-fit: cover; }
+  #bgimg {
+    overflow: hidden;
+    max-width: 100%; }
+  #parrafoEjes {
+    width: auto; }
+  .contenedorFacebook {
+    padding: 30px;
+    margin: 0 auto; }
+  #icons {
+    width: 270px; }
+  #icons li img {
+    width: 70px;
+    height: auto; }
+  #icons li {
+    height: 120px; }
+  .textIcons {
+    font-size: 15px; }
+  .header__nav--desktop {
+    display: none; }
+  .header__nav--responsive {
+    display: block; }
+  input:checked ~ ul {
+    display: block; }
+  .header__nav--responsive input {
+    display: none; }
+  .header__nav--responsive label {
+    box-sizing: border-box;
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none; }
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  .header__nav--responsive label:hover {
+    background: grey; }
+  /* Estilo del boton cuando el menú está expandido*/
+  .header__nav--responsive input:checked ~ label {
+    background: lightgrey; }
+  .header__nav--responsive ul {
+    margin-top: 0;
+    padding: 0;
+    width: 200px;
+    position: absolute;
+    display: none;
+    transform: translate(-170px, 0px);
+    background-color: white;
+    border-radius: 15px;
+    list-style: none; }
+  .header__nav--responsive li {
+    font-family: 'CeraPro-Bold';
+    display: block;
+    margin: 0;
+    padding: 10px;
+    list-style: none; }
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
+  .header__nav--responsive li:hover {
+    filter: brightness(110%); }
+  /*CONOCEME------------------------------------------------------------------------------------------------------*/
+  #sobreMi {
+    flex-direction: column;
+    color: #010165;
+    align-items: center;
+    padding: 16px; }
+    #sobreMi div {
+      width: auto; }
+    #sobreMi p {
+      width: auto; }
+  #soyRoberto {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column; }
+  #fotos {
+    flex-direction: column; }
+    #fotos div {
+      width: 350px;
+      flex-direction: column;
+      align-content: center;
+      height: 900px;
+      justify-content: space-evenly; }
+  #redesFijo {
+    transform: rotate(90deg) translate(10px, 180px); }
+  /*NOVEDADES------------------------------------------------------------------------------------------------*/
+  #novedades {
+    flex-direction: column;
+    align-items: center; }
+  #grillaNoticias {
+    width: 375px; }
+  #noticias {
+    width: 375px;
+    align-items: center; }
+  #noticiasArticulos {
+    flex-direction: column; }
+  #noticiasArticulos article {
+    width: 328px; }
+  #noticiasArticulos article img {
+    height: auto; }
+  .pagination_section {
+    margin-bottom: 30px; }
+  #bgNovedades {
+    height: 273px;
+    transform: translate(0px, 26px); }
+  #proyectos div {
+    width: 375px; }
+  #proyectos h1 {
+    width: 200px;
+    line-height: 30px;
+    margin-left: 12px;
+    height: 180px; }
+  #proyectosArticulos {
+    height: 1500px; }
+  #proyectosArticulos article {
+    height: 850px;
+    align-items: center;
+    width: 350px; }
+  /*SANTA FE ----------------------------------------------------------*/
+  #SFarticulos {
+    width: 350px; }
+  #tituloSF {
+    height: 140px;
+    width: 355px; }
+  #tituloSF h1 {
+    height: 110px; }
+  #ejesSantaFe {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .articulosSF {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+    flex-direction: column;
+    align-items: center; }
+  .articulosSF img {
+    width: 355px;
+    margin-bottom: 30px; }
+  .infoSF {
+    width: 350px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px; }
+  /*PUNTO DE ESCUCHA---------------------------------------------------*/
+  #puntoEscuchaTitulo {
+    width: 353px;
+    height: 360px;
+    text-align: center;
+    margin: 40px 0px 40px 0px; }
+  #formularioImagen {
+    width: auto;
+    flex-direction: column;
+    align-items: center; }
+  .formulario {
+    width: 310px; }
+  #intereses {
+    height: 177px;
+    flex-direction: row;
+    flex-wrap: wrap; }
+  #enviarBtn {
+    margin: 15px 0px 20px 250px; }
+  /*PAGINA DE NOTICIAS-----------------------------------------------------------------*/
+  #pagNoticia {
+    width: auto; }
+    #pagNoticia img {
+      width: 350px; }
+    #pagNoticia h1 {
+      width: 355px; }
+  #textoNoticia {
+    flex-direction: column;
+    align-content: center; }
+    #textoNoticia #textoNoticia p {
+      width: 350px; }
+  #parrafos {
+    width: 350px; } }

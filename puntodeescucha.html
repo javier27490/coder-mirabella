@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <LINK REL=StyleSheet HREF="css/style.css" TYPE="text/css" MEDIA=screen>
+
+    <title>Roberto Mirabella - Punto de Escucha</title>
+    <meta name="description" content="Soy Roberto Mirabella, y este espacio es para poder tener un nuevo canal de diálogo para que me puedas hacer llegar propuestas, consultas o comentarios.">
+    <meta name="keywords"  content="Roberto Mirabella, Senador, Senador Nacional, educación popular, movimientos sociales, santa fe, militancia, peronismo, Omar Perotti, politica, Argentina, funcionario público, SantaFeDePie">
+
+</head>
+<body>
+    <div id="fb-root"></div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v10.0" nonce="wbWEnhmu"></script>
+    <header class="header">
+        <section class="header__navbar">
+            <div>
+                <a href="index.html">
+                    <img src="img/titulo.png" alt="title" style="width: 265px;">
+                </a>
+            </div>
+            <nav class="header__nav--responsive">
+                <input type="checkbox" id="menu">
+                <label for="menu"> ☰ </label>
+                <ul>
+                    <li><a href="conoceme.html">CONOCEME</a></li>
+                    <li><a href="novedades.html">NOVEDADES</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
+                    <li><a href="santafe.html">SANTA FE</a></li>
+                    <li><a href="puntodeescucha.html">PUNTO DE ESCUCHA</a></li>
+                </ul>
+            </nav>
+            <nav class="header__nav--desktop">
+                <ul>
+                    <li><a href="conoceme.html">CONOCEME</a></li>
+                    <li><a href="novedades.html">NOVEDADES</a></li>
+                    <li><a href="proyectos.html">PROYECTOS</a></li>
+                    <li><a href="santafe.html">SANTA FE</a></li>
+                    <li><a href="puntodeescucha.html">PUNTO DE ESCUCHA</a></li>
+                </ul>
+            </nav>
+        </section>
+        
+    </header>
+
+    <div id='ventana-flotante'>
+
+        <a class='cerrar' href='javascript:void(0);' onclick='document.getElementById(&apos;ventana-flotante&apos;).className = &apos;oculto&apos;'>x</a>
+
+        <div id='contenedor'>
+
+            <div class='contenido'>
+                <a href="default.asp"><img src="img/hablaconmigo.png" alt="habla conmigo" ></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="puntoEscucha">
+
+        <div id="puntoEscuchaTitulo">
+            <h1>Punto de escucha</h1>
+            <p>Este espacio es para poder tener un nuevo canal de diálogo para que me puedas hacer llegar propuestas, consultas o comentarios.</p>
+        </div>
+
+        <div id="formularioImagen">
+            <form method="post" action="contacto.php" id="contact" class='formulario'>
+                  <?php
+                      if(ISSET($_SESSION['status'])){
+                        if($_SESSION['status'] == "ok"){
+                    ?>
+                          <div class="alert alert-info"><?php echo $_SESSION['result']?></div>
+                    <?php
+                        }else{
+                    ?>
+                          <div class="alert alert-danger"><?php echo $_SESSION['result']?></div>
+                    <?php
+                        }
+                        unset($_SESSION['result']);
+                        unset($_SESSION['status']);
+                      }
+                    ?>
+
+                    <legend>Contame tu propuesta</legend>
+                    <label for="nombre">Nombre y apellido</label>
+                    <input type="text" name="nombre" placeholder="Nombre">
+                    <label for="email">Correo electrónico</label>
+                    <input type="text" name="email" placeholder="Mail">
+                    <label for="telefono">Teléfono</label>
+                    <input type="text" name="telefono" placeholder="Teléfono">
+                    <label for="localidad">Localidad de Santa Fe. Seleccioná uno</label>
+                    <input list="browsers" name="localidad" placeholder="Localidad">
+                    <datalist id="browsers">
+                        <option value="Belgrano">
+                        <option value="Caseros">
+                        <option value="Castellanos">
+                        <option value="Constitución">
+                        <option value="Garay">
+                        <option value="General López">
+                        <option value="General Obligado">
+                        <option value="Iriondo">
+                        <option value="La Capital">
+                        <option value="Las Colonias">
+                        <option value="Nueve de Julio">
+                        <option value="Rosario">
+                        <option value="San Cristóbal">
+                        <option value="San Javier">
+                        <option value="San Jerónimo">
+                        <option value="San Justo">
+                        <option value="San Lorenzo">
+                        <option value="San Martín">
+                        <option value="Vera">
+                    </datalist>
+                    <label for="ciudad">Ciudad</label>
+                    <input type="text" name="ciudad" placeholder="Ciudad">
+                    <label for="codigopostal">Código postal</label>
+                    <input type="text" name="codigopostal" placeholder="Código postal">
+                    <label for="intereses">Cuáles son tus Intereses</label>
+                <div id="intereses">
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="educacion">
+                            <label for="intereses">Educación</label>
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="salud">
+                            <label for="intereses">Salud</label>
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="turismo">
+                            <label for="intereses">Turismo</label>
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="cultura">
+                            <label for="intereses">Cultura</label>
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="economia-y-produccion">
+                            <label for="intereses">Economía y Producción</label>
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="seguridad">
+                            <label for="intereses">Seguridad</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="deporte">
+                            <label for="intereses">Deporte</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="ambiente">
+                            <label for="intereses">Ambiente</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="trabajo">
+                            <label for="intereses">Trabajo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="servicios-publicos">
+                            <label for="intereses">Servicios Públicos</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="gestion-de-tramites">
+                            <label for="intereses">Gestión de Trámites</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="obras-publicas">
+                            <label for="intereses">Obras Públicas</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="habitat">
+                            <label for="intereses">Hábitat</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="intereses[]" value="genero">
+                            <label for="intereses">Género</label>
+                    </div>
+                </div>
+
+                <label for="consulta">Dejame tu propuesta, consulta o comentario</label>
+                <textarea type="text" name="consulta" placeholder="Mensaje"></textarea>
+
+
+                <input name='send' id="enviarBtn" type="submit" value="Enviar">
+            </form>
+
+            <img style="width: 350px; height: 420px;" src="img/punto-de-escucha/mirabella.png" alt="fotoMirabella">
+        </div>
+    </div>
+    <div id="redesFijo" style="transform: rotate(90deg) translate(230px, 170px);">
+        <ul>
+            <li><a href="https://www.linkedin.com/in/roberto-mirabella/">lnk</a></li>
+            <li><a href="https://www.instagram.com/mirabellarobert">ins</a></li>
+            <li><a href="https://twitter.com/mirabellarob?s=20">twi</a></li>
+            <li><a href="https://www.facebook.com/RobertoMarioMirabella/">fce</a></li>
+        </ul>
+    </div>
+</body>
+</html>
